@@ -1,3 +1,34 @@
++----------------+       +------------+       +-------------+
+|   RTC Module   | ----> |  LPC2148   | ----> |   LCD 16x2   |
++----------------+       +------------+       +-------------+
+                                |
+                                |
+                        +---------------+
+                        | Keypad + Switch|
+                        +---------------+
+                                |
+                        +---------------+
+                        |  Admin Mode   |
+                        +---------------+
+                                |
+                                v
+                     +---------------------+
+                     | LM35 Temp. Sensor   |
+                     +---------------------+
+                                |
+                                v
+                      +------------------+
+                      | LED / BUZZER     |
+                      +------------------+
+
+PROJECT OVERVIEW:
+->EventBoard is a real-time automated message display system designed using the LPC2148 ARM7 controller.
+It displays predefined messages on a 16x2 LCD with scrolling effect at specific scheduled times using 
+the controller’s Real Time Clock (RTC).
+->The system includes an Admin Mode protected with a password and keypad, which allows authorized users to:
+.Edit current time
+.Enable / disable scheduled messages
+.If no scheduled message matches the current time, the system displays real-time clock and room temperature using an LM35 temperature sensor.
 
 | Component                        | Description                 |
 | -------------------------------- | --------------------------- |
@@ -10,6 +41,17 @@
 | **Buzzer (optional)**            | Alert indication            |
 | **5V Power Supply & PCB/Wires**  | System integration          |
 
+KEY FEATURES:
+.RTC-based scheduled message display
+.LCD display with scrolling text
+.10 predefined messages stored in flash memory
+.Secure Admin Mode with switch interrupt + password keypad
+.Message enable/disable selection
+.Room temperature monitoring (ADC)
+.LED indication for status:
+.Green LED: Displaying message
+.Red LED: Idle mode (RTC + Temperature)
+.Buzzer notification support
 
 PROJECT WORK FLOW:
 The EventBoard: RTC-Driven Message Display System using LPC2148 is a real-time, automated message display system 
