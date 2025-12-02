@@ -1,4 +1,25 @@
-
++----------------+ +------------+ +-------------+
+| RTC Module | ----> | LPC2148 | ----> | LCD 16x2 |
++----------------+ +------------+ +-------------+
+|
+|
++---------------+
+| Keypad + Switch|
++---------------+
+|
++---------------+
+| Admin Mode |
++---------------+
+|
+v
++---------------------+
+| LM35 Temp. Sensor |
++---------------------+
+|
+v
++------------------+
+| LED / BUZZER |
++------------------+
 PROJECT OVERVIEW:
 ->EventBoard is a real-time automated message display system designed using the LPC2148 ARM7 controller.
 It displays predefined messages on a 16x2 LCD with scrolling effect at specific scheduled times using 
@@ -30,29 +51,6 @@ KEY FEATURES:
 .Green LED: Displaying message
 .Red LED: Idle mode (RTC + Temperature)
 .Buzzer notification support
-
-+----------------+       +------------+       +-------------+
-|   RTC Module   | ----> |  LPC2148   | ----> |   LCD 16x2   |
-+----------------+       +------------+       +-------------+
-                                |
-                                |
-                        +---------------+
-                        | Keypad + Switch|
-                        +---------------+
-                                |
-                        +---------------+
-                        |  Admin Mode   |
-                        +---------------+
-                                |
-                                v
-                     +---------------------+
-                     | LM35 Temp. Sensor   |
-                     +---------------------+
-                                |
-                                v
-                      +------------------+
-                      | LED / BUZZER     |
-                      +------------------+
 
 
 PROJECT WORK FLOW:
