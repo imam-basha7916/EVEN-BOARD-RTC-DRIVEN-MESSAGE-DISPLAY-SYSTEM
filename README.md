@@ -1,25 +1,3 @@
-+----------------+       +------------+       +-------------+
-|   RTC Module   | ----> |  LPC2148   | ----> |   LCD 16x2   |
-+----------------+       +------------+       +-------------+
-                                |
-                                |
-                        +---------------+
-                        | Keypad + Switch|
-                        +---------------+
-                                |
-                        +---------------+
-                        |  Admin Mode   |
-                        +---------------+
-                                |
-                                v
-                     +---------------------+
-                     | LM35 Temp. Sensor   |
-                     +---------------------+
-                                |
-                                v
-                      +------------------+
-                      | LED / BUZZER     |
-                      +------------------+
 
 PROJECT OVERVIEW:
 ->EventBoard is a real-time automated message display system designed using the LPC2148 ARM7 controller.
@@ -52,6 +30,30 @@ KEY FEATURES:
 .Green LED: Displaying message
 .Red LED: Idle mode (RTC + Temperature)
 .Buzzer notification support
+
++----------------+       +------------+       +-------------+
+|   RTC Module   | ----> |  LPC2148   | ----> |   LCD 16x2   |
++----------------+       +------------+       +-------------+
+                                |
+                                |
+                        +---------------+
+                        | Keypad + Switch|
+                        +---------------+
+                                |
+                        +---------------+
+                        |  Admin Mode   |
+                        +---------------+
+                                |
+                                v
+                     +---------------------+
+                     | LM35 Temp. Sensor   |
+                     +---------------------+
+                                |
+                                v
+                      +------------------+
+                      | LED / BUZZER     |
+                      +------------------+
+
 
 PROJECT WORK FLOW:
 The EventBoard: RTC-Driven Message Display System using LPC2148 is a real-time, automated message display system 
